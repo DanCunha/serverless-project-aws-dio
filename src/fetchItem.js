@@ -10,7 +10,7 @@ const fetchItem = async (event) => {
 
     try {
         const result = await dynamoDB.get({
-            TableName: "ItemTableNew",
+            TableName: "ItemTable",
             Key: {id}
         }).promise();
 

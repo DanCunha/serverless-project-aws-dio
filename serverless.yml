@@ -15,7 +15,7 @@ provider:
                 - dynamodb:GetItem
                 - dynamodb:scan
               Resource:
-                - arn:aws:dynamodb:sa-east-1:329146158945:table/ItemTableNew
+                - arn:aws:dynamodb:us-east-1:329146158945:table/ItemTable
 
 functions:
   hello:
@@ -54,7 +54,7 @@ resources:
     ItemTableNew:
       Type: AWS::DynamoDB::Table
       Properties:
-        TableName: ItemTableNew
+        TableName: ItemTable
         BillingMode: PAY_PER_REQUEST
         AttributeDefinitions: 
           - AttributeName: id

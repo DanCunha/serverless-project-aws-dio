@@ -9,7 +9,7 @@ const updateItem = async (event) => {
     const dynamoDB = new AWS.DynamoDB.DocumentClient();
 
     await dynamoDB.update({
-        TableName: "ItemTableNew",
+        TableName: "ItemTable",
         Key: {id},
         UpdateExpression: 'set itemStatus = :itemStatus',
         ExpressionAttributeValues: {
